@@ -4,8 +4,44 @@
     top: calc(50% - 100px);
     border-radius: 50%;
 }
+#two {
+    background: #dadada;
+}
 .image {
     background: #413231;
+}
+.yarn {
+    background: #a89898;
+}
+#skills {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0 40px 30px 0;
+}
+.css, .html, .python, .js {
+    float: right;
+}
+#girl {
+    max-height: 150px;
+    position: relative;
+    left: calc(50% - 25px);
+    top: calc(50% - 55px);
+}
+#resume, #game, #yarn {
+    max-height: 150px;
+    position: relative;
+    left: calc(50% - 135px);
+    top: calc(50% - 75px);
+}
+#lady {
+    position: relative;
+    left: calc(50% - 45px);
+}
+#lady.underline {
+    position: relative;
+    left: calc(50% - 40px);
+    top: calc(50% - 100px);
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
 audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
@@ -88,7 +124,7 @@ html,body{height:100%}
 .onlytc{display:none}
 .blocks > div > a{display:block;height:100%;position:relative}
 .blocks > div.f-red{margin:0;position:relative}
-.blocks > div.f-red > p{position:absolute;margin:0;color:#a5142d;line-height:2.4rem}
+.blocks > div.f-red > p{position:absolute;margin:0;color:#49577A;line-height:2.4rem}
 .blocks > div.f-red.upnleft > p{top:28px;left:40px}
 .blocks > div.f-red.downnright > p{bottom:28px;right:40px;text-align:right}
 a > .underline{position:relative;display:block;bottom:-45%;text-align:center}
@@ -96,8 +132,8 @@ a > .underline span{color:#413231;padding-bottom:2px;display:inline-block}
 a > .underline span:after{content:'';display:block;margin:auto;height:2px;width:0;background:#9c7e7c;transition:width .5s ease}
 a:hover > .underline span:after{width:100%}
 .f-logo a{background:#413231;}
-.f-default{background:#dadada}
-.f-aboutme,.f-socials{background-color:#bfabaa}
+.f-default{background:#98d3d4}
+.f-aboutme,.f-socials{background-color:#a89898}
 .f-aboutme .icon-aboutme{display:block;width:58px;min-height:55px;margin:0 auto;position:relative;bottom:-30%;background-position:-297px -220px}
 .f-aboutme a .underline span{color:#413231}
 .f-aboutme a .underline span:after{background:#9c7e7c}
@@ -116,7 +152,7 @@ a:hover > .underline span:after{width:100%}
 .f-contactme a span:after{background:#E1CED0}
 .f-socials nav{position:relative;bottom:-30%;text-align:center}
 .f-socials nav span{display:block;margin-bottom:8%}
-.f-socials nav a{display:inline-block;width:46px;height:46px;background-color:#9f0e29;background-position:-56px -59px;border-radius:50%;text-indent:9999px;overflow:hidden}
+.f-socials nav a{display:inline-block;width:46px;height:46px;background-color:#E6DE8B;background-position:-56px -59px;border-radius:50%;text-indent:9999px;overflow:hidden}
 .f-socials nav a.sk{background-position:-117px -60px}
 .f-socials nav a.in{background-position:-178px -61px}
 .ps-container{position:absolute;width:100%;height:100%;overflow:hidden;text-transform:uppercase;color:#555;background:#f2eceb}
