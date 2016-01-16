@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Cynthia O'Donnell Web Developer</title>
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC|Nothing+You+Could+Do|Homemade+Apple|Forum|Wire+One|Raleway+Dots' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome.min.css">
     <link rel="stylesheet" href="flex.css">
 </head>
 <body>
@@ -11,6 +12,7 @@
         <!-- Name, replace with image? -->
         <div class="item one">
             <h1>Cynthia &nbsp;<br> &nbsp; O'Donnell</h1>
+            <p id="title">JavaScript Web Developer</p>
         </div>
         <!-- Skills, make sure each skill is demonstrated -->
         <div class="item two">
@@ -22,22 +24,92 @@
                 <li>JavaScript</li>
             </ul>
         </div>
+
         <!-- Basic JavaScript, CSS, design sense -->
-        <div class="item three"><img id="resume"src="img/InteractiveResume.png"></div>
-        <div class="item four"><h1>social links</h1></div>
-        <div class="item five"><p id="me">I am Cynthia O'Donnell.<br/>Welcome to my portfolio.</p></div>
+        <div class="item three">
+            <img id="resume"src="img/InteractiveResume.png">
+            <div id="resume-detail" class="caption">
+                <p style="position: relative; top: 50px; margin: 20px;" class="text">An interactive resume made with jQuery and Bootstrap</p>
+                <a class="learn-more" href="http://mimibambino.github.io/InteractiveResume/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+
+        <div class="item four">
+            <div id="social">
+                <a href="https://www.github.com/mimibambino" target="_blank"><i class="fa fa-github-square"></i></a>
+                <a href="https://www.linkedin.com/in/cynthiafussellodonnell" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                <a href="https://twitter.com/MimiBambino" target="_blank"><i class="fa fa-twitter-square"></i></a>
+            </div>
+        </div>
+        <div class="item five"><p id="me">Welcome to my portfolio.</p></div>
         <!-- Advanced JS, data wrangling, entrepreneurship -->
-        <div class="item six"><img id="yarn"src="img/blueYS.png"></div>
-        <div class="item seven"><h1>seven</h1></div>
+        <div class="item six"><img id="yarn"src="img/blueYS.png">
+            <div id="yarn-detail" class="caption">
+            <p style="position: relative; top: 50px; margin: 20px;" class="text">Shop for and compare yarns available on many different websites</p>
+            <a class="learn-more" href="http://www.yarnsherpa.com" target="_blank">Live Demo</a>
+            </div>
+        </div>
+        <div class="item seven"></div>
         <!-- Advanced JavaScript, object oriented code, HTML5 canvas -->
-        <div class="item eight"><img id="game"src="img/TreasureHunt.png"></div>
+        <div class="item eight"><img id="game"src="img/TreasureHunt.png">
+            <div id="game-detail" class="caption">
+                <p style="position: relative; top: 50px; margin: 20px;" class="text">An HTML5 game using Object Oriented JavaScript</p>
+                <a class="learn-more" href="http://mimibambino.github.io/TreasureHunt/">Live Demo</a>
+            </div>
+        </div>
         <!-- R, data analysis, statistics, data visualization -->
-        <div class="item nine"><img id="graph"src="img/graph.png"></div>
-        <div class="item ten"><h1>ten</h1></div>
+        <div class="item nine"><img id="graph"src="img/graph.png">
+            <div id="graph-detail" class="caption">
+                <p style="position: relative; top: 50px; margin: 20px;" class="text">Exploratory Data Analysis of wine quality with R</p>
+                <a class="learn-more" href="http://mimibambino.github.io/EDA/">Live Demo</a>
+            </div>
+        </div>
+        <div class="item ten"></div>
         <!-- D3.js, data visualization -->
-        <div class="item eleven"><img id="states"src="img/statehoodMac.png"></div>
+        <div class="item eleven"><img id="states"src="img/statehoodMac.png">
+            <div id="states-detail" class="caption">
+                <p style="position: relative; top: 50px; margin: 20px;" class="text">Map of the United States animated in order of statehood using d3.js</p>
+                <a class="learn-more" href="#">Live Demo</a>
+            </div>
+        </div>
         <!-- graphic design -->
         <div class="item twelve"><img id="lady" src="img/womanAtLaptopSVG.png"></div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="flex.js" type="text/js"></script>
+    <script>
+    $(document).ready(function() {
+        // var that;
+        // $(".container").hover(function(){
+        //     console.log(event.target);
+        // });
+
+        $(".three").hover(function() {
+            $("#resume-detail").slideDown(200);
+        }, function(){
+            $("#resume-detail").slideUp(200);
+        });
+        $(".six").hover(function() {
+            $("#yarn-detail").slideDown(200);
+        }, function(){
+            $("#yarn-detail").slideUp(200);
+        });
+        $(".eight").hover(function() {
+            $("#game-detail").slideDown(200);
+        }, function(){
+            $("#game-detail").slideUp(200);
+        });
+        $(".nine").hover(function() {
+            $("#graph-detail").slideDown(200);
+        }, function(){
+            $("#graph-detail").slideUp(200);
+        });
+        $(".eleven").hover(function() {
+            $("#states-detail").slideDown(200);
+        }, function(){
+            $("#states-detail").slideUp(200);
+        });
+    });
+    </script>
 </body>
 </html>
