@@ -27,8 +27,9 @@
 
         <!-- Basic JavaScript, CSS, design sense -->
         <div class="item three">
-            <img id="resume"src="img/InteractiveResume.png">
+            <img id="resume" src="img/InteractiveResume.png">
             <div id="resume-detail" class="caption">
+                <div class="x">X</div>
                 <p style="position: relative; top: 50px; margin: 20px;" class="text">An interactive resume made with jQuery and Bootstrap</p>
                 <a class="learn-more" href="http://mimibambino.github.io/InteractiveResume/" target="_blank">Live Demo</a>
             </div>
@@ -41,35 +42,43 @@
                 <a href="https://twitter.com/MimiBambino" target="_blank"><i class="fa fa-twitter-square"></i></a>
             </div>
         </div>
-        <div class="item five"><p id="me">Welcome to my portfolio.</p></div>
+        <div class="item five"><p id="me">Welcome to my portfolio.<br />Click on an image for details.</p></div>
         <!-- Advanced JS, data wrangling, entrepreneurship -->
-        <div class="item six"><img id="yarn"src="img/blueYS.png">
+        <div class="item six">
+            <img id="yarn"src="img/blueYS.png">
             <div id="yarn-detail" class="caption">
+                <div class="x">X</div>
             <p style="position: relative; top: 50px; margin: 20px;" class="text">Shop for and compare yarns available on many different websites</p>
             <a class="learn-more" href="http://www.yarnsherpa.com" target="_blank">Live Demo</a>
             </div>
         </div>
         <div class="item seven"></div>
         <!-- Advanced JavaScript, object oriented code, HTML5 canvas -->
-        <div class="item eight"><img id="game"src="img/TreasureHunt.png">
+        <div class="item eight">
+            <img id="game"src="img/TreasureHunt.png">
             <div id="game-detail" class="caption">
+                <div class="x">X</div>
                 <p style="position: relative; top: 50px; margin: 20px;" class="text">An HTML5 game using Object Oriented JavaScript</p>
                 <a class="learn-more" href="http://mimibambino.github.io/TreasureHunt/">Live Demo</a>
             </div>
         </div>
         <!-- R, data analysis, statistics, data visualization -->
-        <div class="item nine"><img id="graph"src="img/graph.png">
+        <div class="item nine">
+            <img id="graph"src="img/graph.png">
             <div id="graph-detail" class="caption">
+                <div class="x">X</div>
                 <p style="position: relative; top: 50px; margin: 20px;" class="text">Exploratory Data Analysis of wine quality with R</p>
-                <a class="learn-more" href="http://mimibambino.github.io/EDA/">Live Demo</a>
+                <a class="learn-more" href="http://mimibambino.github.io/EDA/" target="_blank">Live Demo</a>
             </div>
         </div>
         <div class="item ten"></div>
         <!-- D3.js, data visualization -->
-        <div class="item eleven"><img id="states"src="img/statehoodMac.png">
+        <div class="item eleven">
+            <img id="states"src="img/statehoodMac.png">
             <div id="states-detail" class="caption">
+                <div class="x">X</div>
                 <p style="position: relative; top: 50px; margin: 20px;" class="text">Map of the United States animated in order of statehood using d3.js</p>
-                <a class="learn-more" href="#">Live Demo</a>
+                <a class="learn-more" href="http://mimibambino.github.io/StatehoodMap/" target="_blank">Live Demo</a>
             </div>
         </div>
         <!-- graphic design -->
@@ -79,35 +88,27 @@
     <script src="flex.js" type="text/js"></script>
     <script>
     $(document).ready(function() {
-        // var that;
-        // $(".container").hover(function(){
-        //     console.log(event.target);
-        // });
+// $(this).closest("div.card").parent().remove();
 
-        $(".three").hover(function() {
-            $("#resume-detail").slideDown(200);
-        }, function(){
-            $("#resume-detail").slideUp(200);
+        $(".three > img").click(function() {
+            // console.log($(this).next());
+            $("#resume-detail").slideDown(400);
         });
-        $(".six").hover(function() {
-            $("#yarn-detail").slideDown(200);
-        }, function(){
-            $("#yarn-detail").slideUp(200);
+        $(".six > img").click(function() {
+            $("#yarn-detail").slideDown(400);
         });
-        $(".eight").hover(function() {
-            $("#game-detail").slideDown(200);
-        }, function(){
-            $("#game-detail").slideUp(200);
+        $(".eight > img").click(function() {
+            $("#game-detail").slideDown(400);
         });
-        $(".nine").hover(function() {
-            $("#graph-detail").slideDown(200);
-        }, function(){
-            $("#graph-detail").slideUp(200);
+        $(".nine > img").click(function() {
+            $("#graph-detail").slideDown(400);
         });
-        $(".eleven").hover(function() {
-            $("#states-detail").slideDown(200);
-        }, function(){
-            $("#states-detail").slideUp(200);
+        $(".eleven > img").click(function() {
+            $("#states-detail").slideDown(400);
+        });
+
+        $(".x").click(function() {
+            $(this).closest("div.caption").slideUp(200);
         });
     });
     </script>
